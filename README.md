@@ -46,15 +46,15 @@ The OLED pin order on the module is GND, VDD, SCK (SCL), SDA.
 
 ### UART with jumper
 
-![UART with jumper](UART with jumper.png)
+![UART with jumper](UART_with_jumper.png)
 
 ### UART without jumper
 
-![UART with jumper](UART without jumper.png)
+![UART with jumper](UART_without_jumper.png)
 
 ### I²C with module
 
-![I²C with module](I²C with module.png)
+![I²C with module](I²C_with_module.png)
 
 ### I²C without module
 
@@ -64,11 +64,11 @@ No I2C devices found
 
 ### SPI with jumper
 
-![SPI with jumper](SPI with jumper.png)
+![SPI with jumper](SPI_with_jumper.png)
 
 ### SPI without jumper
 
-![SPI with jumper](SPI without jumper.png)
+![SPI with jumper](SPI_without_jumper.png)
 
 ### Baud-rate experiment
 
