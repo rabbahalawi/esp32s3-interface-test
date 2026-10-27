@@ -1,0 +1,23 @@
+#define UART_TX 17
+#define UART_RX 18
+
+void setup() {
+  Serial.begin(115200);                                  // USB serial to the computer
+  delay(1500);                                           // wait for the monitor to connect
+  Serial2.begin(9600, SERIAL_8N1, UART_RX, UART_TX);     // 9600, 8 data bits, no parity, 1 stop bit
+  Serial.println("UART loopback test");
+}
+
+void loop() {
+  Serial2.print("PING");                 // send on TX
+  delay(100);                            // give the bytes time to come back
+
+  bool gotData = false;
+  while (Serial2.available()) {          // print every byte received on RX
+    Serial.write(Serial2.read());
+    gotData = true;
+  }
+  if (gotData) Serial.println();
+
+  delay(900);                            // about 1 second per loop
+}
